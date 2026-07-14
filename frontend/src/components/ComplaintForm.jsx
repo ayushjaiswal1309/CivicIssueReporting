@@ -31,7 +31,7 @@ const issueTitlesByCategory = {
 };
 
 const categories = Object.keys(issueTitlesByCategory).concat('Other');
-const libraries = ['geocoding']; // Only geocoding is needed now
+// const libraries = ['geocoding']; // Only geocoding is needed now
 
 const ComplaintForm = ({ onComplaintSubmitted }) => {
     const [title, setTitle] = useState('');
@@ -55,7 +55,6 @@ const ComplaintForm = ({ onComplaintSubmitted }) => {
     const { isLoaded } = useJsApiLoader({
         id: 'google-map-script',
         googleMapsApiKey: import.meta.env.VITE_GOOGLE_MAPS_API_KEY,
-        libraries,
     });
 
     useEffect(() => {

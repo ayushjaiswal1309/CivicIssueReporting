@@ -86,8 +86,8 @@ const MapView = ({ complaints }) => {
           <MarkerF
             key={complaint._id}
             position={{
-              lat: complaint.location.coordinates[1], // Latitude
-              lng: complaint.location.coordinates[0], // Longitude
+              lat: complaint?.location?.coordinates[1], // Latitude
+              lng: complaint?.location?.coordinates[0], // Longitude
             }}
             icon={getMarkerIcon(complaint.priority)}
             onClick={() => handleMarkerClick(complaint._id)}
